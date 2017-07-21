@@ -124,18 +124,13 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
-    public function actionLanguage($language)
+
+    /**
+     * Switches the language and redirects back
+     */
+    public function actionSwitchLanguage()
     {
-        $language = Yii::$app->request->post('language');
-        Yii::$app->language = $language;
-
-        $languageCookie = new Cookie([
-            'name' => 'language',
-            'value' => $language,
-            'expire' => time() + 60 * 60 * 24 * 180, // 180 days
-        ]);
-        Yii::$app->response->cookies->add($languageCookie);
-
-        return $this->goBack();
+        Yii::$app->cookieLanguageSelector->setLanguage(Yii::$app->request->post('language'));
+        $this->redirect(Yii::$app->request->post('redirectTo', ['site/index']));
     }
 }

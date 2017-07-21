@@ -36,7 +36,19 @@ $language = Yii::$app->language;
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
-    NavBar::end();    ?>
+    ?>
+    <?= Html::beginForm(['site/switch-language'], 'post') ?>
+    <?= Html::hiddenInput('redirectTo', \yii\helpers\Url::to(Yii::$app->request->url)) ?>
+    <?= Html::beginTag('select', ['name' => 'language', 'onchange' => 'this.form.submit();']) ?>
+    <?= Html::renderSelectOptions(\Yii::$app->language, [
+        'en-US' => 'English',
+        'uk-UA' => 'Ukrainian',
+        'ru-RU' => 'Russian',
+    ]) ?>
+    <?= Html::endTag('select') ?>
+    <?= Html::endForm() ?>
+    <p>Current language is <?= Html::encode(\Yii::$app->language) ?> </p>
+    <? NavBar::end();    ?>
 
     <div class="container">
         <?php if (Yii::$app->session->hasFlash('success')): ?>

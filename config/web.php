@@ -6,13 +6,17 @@ $db = require(__DIR__ . '/db.php');
 $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log'],
+    'bootstrap' => ['log', 'cookieLanguageSelector'],
     'timeZone' => 'Europe/Kiev',
 
     'components' => [
 
 
-
+        'cookieLanguageSelector' => [
+            'class' => 'gugglegum\Yii2\Extension\CookieLanguageSelector\Component',
+            'defaultLanguage' => 'en-US',
+            'validLanguages' => ['en-US', 'ru-RU', 'uk-UA'],
+        ],
 
 
             'assetManager' => [
