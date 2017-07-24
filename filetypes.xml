@@ -3,6 +3,7 @@
     <extensionMap>
       <mapping pattern="index" type="PHP" />
       <mapping pattern="test_commit" type="PLAIN_TEXT" />
+      <mapping pattern="test_file" type="PLAIN_TEXT" />
     </extensionMap>
   </component>
 </application>
