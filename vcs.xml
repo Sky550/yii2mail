@@ -34,6 +34,18 @@
           <option name="url" value="git@bitbucket-account2:savelifedev/faq.savelifeid.com.git" />
           <option name="userName" value="" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="git2@bitbucket-account2:buhryk/osvita.git" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="git@bitbucket-account2:buhryk/osvita.git" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="https://Sky550@bitbucket.org/buhryk/osvita.git" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
       </list>
     </option>
     <option name="cloneParentDir" value="D:\OS\OpenServer\domains\" />
